@@ -32,18 +32,18 @@
             this.menuAna = new System.Windows.Forms.MenuStrip();
             this.dosyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form2AçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form3AçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox1ProjesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listbox01ProjesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAna.SuspendLayout();
             this.SuspendLayout();
             // 
             // btonExit
             // 
             this.btonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btonExit.Location = new System.Drawing.Point(494, 625);
+            this.btonExit.Location = new System.Drawing.Point(508, 484);
             this.btonExit.Margin = new System.Windows.Forms.Padding(6);
             this.btonExit.Name = "btonExit";
             this.btonExit.Size = new System.Drawing.Size(79, 44);
@@ -58,7 +58,7 @@
             this.dosyaToolStripMenuItem});
             this.menuAna.Location = new System.Drawing.Point(0, 0);
             this.menuAna.Name = "menuAna";
-            this.menuAna.Size = new System.Drawing.Size(588, 24);
+            this.menuAna.Size = new System.Drawing.Size(602, 24);
             this.menuAna.TabIndex = 1;
             this.menuAna.Text = "menuStrip1";
             // 
@@ -77,16 +77,37 @@
             // form2AçToolStripMenuItem
             // 
             this.form2AçToolStripMenuItem.Name = "form2AçToolStripMenuItem";
-            this.form2AçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form2AçToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.form2AçToolStripMenuItem.Text = "Form2 Aç";
             this.form2AçToolStripMenuItem.Click += new System.EventHandler(this.form2AçToolStripMenuItem_Click);
+            // 
+            // form3AçToolStripMenuItem
+            // 
+            this.form3AçToolStripMenuItem.Name = "form3AçToolStripMenuItem";
+            this.form3AçToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.form3AçToolStripMenuItem.Text = "Form3 Aç";
+            this.form3AçToolStripMenuItem.Click += new System.EventHandler(this.form3AçToolStripMenuItem_Click);
             // 
             // mnuiExit
             // 
             this.mnuiExit.Name = "mnuiExit";
-            this.mnuiExit.Size = new System.Drawing.Size(180, 22);
+            this.mnuiExit.Size = new System.Drawing.Size(178, 22);
             this.mnuiExit.Text = "Çıkış";
             this.mnuiExit.Click += new System.EventHandler(this.mnuiExit_Click);
+            // 
+            // comboBox1ProjesiToolStripMenuItem
+            // 
+            this.comboBox1ProjesiToolStripMenuItem.Name = "comboBox1ProjesiToolStripMenuItem";
+            this.comboBox1ProjesiToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.comboBox1ProjesiToolStripMenuItem.Text = "ComboBox1 Projesi";
+            this.comboBox1ProjesiToolStripMenuItem.Click += new System.EventHandler(this.comboBox1ProjesiToolStripMenuItem_Click);
+            // 
+            // listbox01ProjesiToolStripMenuItem
+            // 
+            this.listbox01ProjesiToolStripMenuItem.Name = "listbox01ProjesiToolStripMenuItem";
+            this.listbox01ProjesiToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.listbox01ProjesiToolStripMenuItem.Text = "Listbox01 Projesi";
+            this.listbox01ProjesiToolStripMenuItem.Click += new System.EventHandler(this.listbox01ProjesiToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 
@@ -95,32 +116,11 @@
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
-            // form3AçToolStripMenuItem
-            // 
-            this.form3AçToolStripMenuItem.Name = "form3AçToolStripMenuItem";
-            this.form3AçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.form3AçToolStripMenuItem.Text = "Form3 Aç";
-            this.form3AçToolStripMenuItem.Click += new System.EventHandler(this.form3AçToolStripMenuItem_Click);
-            // 
-            // comboBox1ProjesiToolStripMenuItem
-            // 
-            this.comboBox1ProjesiToolStripMenuItem.Name = "comboBox1ProjesiToolStripMenuItem";
-            this.comboBox1ProjesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.comboBox1ProjesiToolStripMenuItem.Text = "ComboBox1 Projesi";
-            this.comboBox1ProjesiToolStripMenuItem.Click += new System.EventHandler(this.comboBox1ProjesiToolStripMenuItem_Click);
-            // 
-            // listbox01ProjesiToolStripMenuItem
-            // 
-            this.listbox01ProjesiToolStripMenuItem.Name = "listbox01ProjesiToolStripMenuItem";
-            this.listbox01ProjesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listbox01ProjesiToolStripMenuItem.Text = "Listbox01 Projesi";
-            this.listbox01ProjesiToolStripMenuItem.Click += new System.EventHandler(this.listbox01ProjesiToolStripMenuItem_Click);
-            // 
             // frmAna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 684);
+            this.ClientSize = new System.Drawing.Size(602, 543);
             this.Controls.Add(this.btonExit);
             this.Controls.Add(this.menuAna);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

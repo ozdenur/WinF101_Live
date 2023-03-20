@@ -75,7 +75,6 @@ namespace Menu2ndForm
 
             form1.ShowDialog();
 
-
         }
 
         private void frmAna_Load(object sender, EventArgs e)
