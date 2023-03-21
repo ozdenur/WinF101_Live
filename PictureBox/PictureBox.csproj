@@ -52,10 +52,19 @@
     <Compile Include="frmPictureBox.Designer.cs">
       <DependentUpon>frmPictureBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSec.Designer.cs">
+      <DependentUpon>frmSec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmPictureBox.resx">
       <DependentUpon>frmPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSec.resx">
+      <DependentUpon>frmSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
