@@ -62,7 +62,7 @@ namespace MonthDays
             {
                 lboxGunler.Items.Add(tarih.Day + " " + cboxAy.Text + " " + formatTR.DayNames[(int)tarih.DayOfWeek]);
 
-                tarih=tarih.AddDays(1); // birer gün olarak ilk tarihten son güne kadar dönmesi için.
+                tarih=tarih.AddDays(1); // birer gün olarak ilk tarihten son güne kadar dönmesi için AddDays(1) yapıldı.
             }
 
         }
