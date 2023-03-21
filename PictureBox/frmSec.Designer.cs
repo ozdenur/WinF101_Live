@@ -34,7 +34,7 @@
             // 
             // btonSelect
             // 
-            this.btonSelect.Location = new System.Drawing.Point(116, 80);
+            this.btonSelect.Location = new System.Drawing.Point(97, 159);
             this.btonSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btonSelect.Name = "btonSelect";
             this.btonSelect.Size = new System.Drawing.Size(112, 34);
