@@ -40,7 +40,7 @@
             // btonExit
             // 
             this.btonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btonExit.Location = new System.Drawing.Point(610, 599);
+            this.btonExit.Location = new System.Drawing.Point(779, 599);
             this.btonExit.Name = "btonExit";
             this.btonExit.Size = new System.Drawing.Size(90, 47);
             this.btonExit.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.dgrdCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrdCustomers.Location = new System.Drawing.Point(27, 75);
             this.dgrdCustomers.Name = "dgrdCustomers";
-            this.dgrdCustomers.Size = new System.Drawing.Size(664, 451);
+            this.dgrdCustomers.Size = new System.Drawing.Size(842, 451);
             this.dgrdCustomers.TabIndex = 1;
             this.dgrdCustomers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrdCustomers_CellDoubleClick);
             // 
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 658);
+            this.ClientSize = new System.Drawing.Size(881, 658);
             this.Controls.Add(this.btonUpdate);
             this.Controls.Add(this.btonDelete);
             this.Controls.Add(this.btonAdd);

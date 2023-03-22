@@ -74,10 +74,10 @@ namespace ADO01
                         this.Close();
 
                     }
-                    catch (Exception)
+                    catch (Exception message)
                     {
-
-                        throw;
+                        MessageBox.Show(message.ToString());
+                        
                     }
 
                 }

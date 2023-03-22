@@ -104,6 +104,9 @@ namespace ADO01
         private void btonUpdate_Click(object sender, EventArgs e)
         {
             ShowData("U");// metoduma Update işlemi yapabilmek için U parametresini gönderiyorum
+
+            BindGrid();
+
         }
 
         private void btonDelete_Click(object sender, EventArgs e)
@@ -165,6 +168,9 @@ namespace ADO01
         {
             // aynı sanki Update butonuna basılmış gibi davranacak...
             ShowData("U");
+            // döndü..tekrardan gridi doldurması lazım...Refresh...
+            BindGrid();
+
         }
     }
 }
