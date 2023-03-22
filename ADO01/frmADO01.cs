@@ -95,17 +95,15 @@ namespace ADO01
 
         private void btonAdd_Click(object sender, EventArgs e)
         {
-            // ShowData("I")
+            ShowData("I"); // metoduma Insert işlemi yapabilmek için I parametresini gönderiyorum
 
-            ADO01_Detail frmADO01_Detail = new ADO01_Detail();
 
-            frmADO01_Detail.ShowDialog();
             
         }
 
         private void btonUpdate_Click(object sender, EventArgs e)
         {
-            // ShowData("U")
+            ShowData("U");// metoduma Update işlemi yapabilmek için U parametresini gönderiyorum
         }
 
         private void btonDelete_Click(object sender, EventArgs e)
@@ -117,6 +115,56 @@ namespace ADO01
         {
             // Bu metod üzerine aldığı parametreye göre 2. bir form açacak. 2. form istenilen işlemin (I,U) değerine göre ekrana gelecek. I/U işlemini bu yeni form üzerin yapacak. D işlemi şu an bulunulan formdan yapacak.
 
+
+            ADO01_Detail frmADO01_Detail = new ADO01_Detail();
+
+            frmADO01_Detail.Mode = prmMode; // gelen parametreyi direkt olarak detay formuna pasladım.
+
+
+            // gelen parametreye göre diğer detay formun elemanlarını ayarlıyorum
+
+            switch (prmMode)
+            {
+                case "I":
+                    // Initial değerler veriliyor...
+                    frmADO01_Detail.tboxCustomerID.Enabled = true;
+                    frmADO01_Detail.tboxCompanyName.Text = "";
+                    frmADO01_Detail.tboxContactName.Text = "";
+                    frmADO01_Detail.tboxCountry.Text = "";
+
+                    frmADO01_Detail.tboxCustomerID.Select();
+                    break;
+
+                case "U":
+                    // Initial değerler veriliyor...
+                    frmADO01_Detail.tboxCustomerID.Enabled = false;
+
+                    frmADO01_Detail.tboxCustomerID.Text = dgrdCustomers.CurrentRow.Cells[0].Value.ToString();
+                    frmADO01_Detail.tboxCompanyName.Text = dgrdCustomers.CurrentRow.Cells[1].Value.ToString();
+                    frmADO01_Detail.tboxContactName.Text = dgrdCustomers.CurrentRow.Cells[2].Value.ToString(); ;
+                    frmADO01_Detail.tboxCountry.Text = dgrdCustomers.CurrentRow.Cells[3].Value.ToString(); ;
+
+                    frmADO01_Detail.tboxCompanyName.Select();
+                    break;
+
+
+
+
+                default:
+                    break;
+            }
+
+
+
+
+
+
+
+
+
+
+
+            frmADO01_Detail.ShowDialog();
 
 
         }

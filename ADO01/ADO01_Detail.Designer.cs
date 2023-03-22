@@ -36,6 +36,8 @@
             this.tboxContactName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tboxCountry = new System.Windows.Forms.TextBox();
+            this.btonSave = new System.Windows.Forms.Button();
+            this.btonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -102,11 +104,33 @@
             this.tboxCountry.Size = new System.Drawing.Size(126, 26);
             this.tboxCountry.TabIndex = 7;
             // 
+            // btonSave
+            // 
+            this.btonSave.Location = new System.Drawing.Point(164, 316);
+            this.btonSave.Name = "btonSave";
+            this.btonSave.Size = new System.Drawing.Size(91, 39);
+            this.btonSave.TabIndex = 8;
+            this.btonSave.Text = "Kaydet";
+            this.btonSave.UseVisualStyleBackColor = true;
+            // 
+            // btonClose
+            // 
+            this.btonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btonClose.Location = new System.Drawing.Point(362, 376);
+            this.btonClose.Name = "btonClose";
+            this.btonClose.Size = new System.Drawing.Size(82, 33);
+            this.btonClose.TabIndex = 9;
+            this.btonClose.Text = "Kapat";
+            this.btonClose.UseVisualStyleBackColor = true;
+            this.btonClose.Click += new System.EventHandler(this.btonClose_Click);
+            // 
             // ADO01_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 427);
+            this.ClientSize = new System.Drawing.Size(456, 421);
+            this.Controls.Add(this.btonClose);
+            this.Controls.Add(this.btonSave);
             this.Controls.Add(this.tboxCountry);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tboxContactName);
@@ -128,12 +152,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tboxCustomerID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tboxCompanyName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tboxContactName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tboxCountry;
+        private System.Windows.Forms.Button btonSave;
+        private System.Windows.Forms.Button btonClose;
+        public System.Windows.Forms.TextBox tboxCustomerID;
+        public System.Windows.Forms.TextBox tboxCompanyName;
+        public System.Windows.Forms.TextBox tboxContactName;
+        public System.Windows.Forms.TextBox tboxCountry;
     }
 }
