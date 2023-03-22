@@ -143,11 +143,12 @@
             this.Controls.Add(this.tboxCustomerID);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ADO01_Detail";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADO01_Detail";
+            this.Load += new System.EventHandler(this.ADO01_Detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
