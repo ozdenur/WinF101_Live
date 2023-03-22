@@ -156,17 +156,15 @@ namespace ADO01
 
 
 
-
-
-
-
-
-
-
-
             frmADO01_Detail.ShowDialog();
 
 
+        }
+
+        private void dgrdCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // aynı sanki Update butonuna basılmış gibi davranacak...
+            ShowData("U");
         }
     }
 }

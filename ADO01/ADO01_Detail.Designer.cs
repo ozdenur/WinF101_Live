@@ -112,6 +112,7 @@
             this.btonSave.TabIndex = 8;
             this.btonSave.Text = "Kaydet";
             this.btonSave.UseVisualStyleBackColor = true;
+            this.btonSave.Click += new System.EventHandler(this.btonSave_Click);
             // 
             // btonClose
             // 

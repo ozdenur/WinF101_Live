@@ -55,6 +55,7 @@
             this.dgrdCustomers.Name = "dgrdCustomers";
             this.dgrdCustomers.Size = new System.Drawing.Size(664, 451);
             this.dgrdCustomers.TabIndex = 1;
+            this.dgrdCustomers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrdCustomers_CellDoubleClick);
             // 
             // label1
             // 

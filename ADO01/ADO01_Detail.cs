@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,66 @@ namespace ADO01
         private void btonClose_Click(object sender, EventArgs e)
         {
             this.Close(); // formu kapatacak
+
+        }
+
+        private void btonSave_Click(object sender, EventArgs e)
+        {
+            string vs_SQLText="";
+
+
+            // bu form her iki işe de yarayacağı için hangi modda olduğumu anlamam lazım
+
+            switch (Mode)
+            {
+                // Bazı SQL injectionları engellemek açısın ve daha sade bir komut satırı olması için parametrik kullanım tercih edildi.
+                case "U":
+                    vs_SQLText = "UPDATE Customers SET ";
+                    /* vs_SQLText += "CompanyName='" + tboxCompanyName.Text + "' ";*/
+                    vs_SQLText += "CompanyName=@CompanyName,";
+                    vs_SQLText += "ContactName=@ContactName,";
+                    vs_SQLText += "Country=@Country ";
+                    vs_SQLText += "WHERE CustomerID=@CustomerID";
+                    // SQL Text oluşturuldu...Parametreli...
+                    break;
+
+                default:
+                    break;
+            }
+
+            using(SqlConnection con= new SqlConnection(constring)) 
+            {
+                using (SqlCommand cmd = new SqlCommand(vs_SQLText, con))
+                {
+                    // şimdi sıra parametreleri doldurmada...
+                    cmd.Parameters.AddWithValue("CustomerID", tboxCustomerID.Text);
+                    cmd.Parameters.AddWithValue("CompanyName", tboxCompanyName.Text);
+                    cmd.Parameters.AddWithValue("ContactName", tboxContactName.Text);
+                    cmd.Parameters.AddWithValue("Country", tboxCountry.Text);
+
+                    cmd.CommandType = CommandType.Text;
+
+                    try
+                    {
+                        con.Open(); // tanımlanan connection açılıyor..
+                        cmd.ExecuteNonQuery(); // çalıştırıyor..sqltextimi sql server tarafına gön
+
+                        MessageBox.Show("Bilgileriniz güncellenmiştir...Geçmiş olsun...");
+                        this.Close();
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+                }
+
+
+
+
+            }
 
         }
     }
