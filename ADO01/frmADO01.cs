@@ -16,6 +16,7 @@ namespace ADO01
         // Global Kısım
         // Aşağıdaki değişgen VT bağlanabilmek için gerekli olan bağlantı cümleciğidir. Şu makinaya..şu database e bağlanmak istiyorum gibi
         string constring = @"Data Source=DESKTOP-AD6B5QM\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
+        string vs_SQLText = "";
 
         public frmADO01()
         {
@@ -97,6 +98,7 @@ namespace ADO01
         {
             ShowData("I"); // metoduma Insert işlemi yapabilmek için I parametresini gönderiyorum
 
+            BindGrid(); // Refresh Re-Bind...
 
             
         }
@@ -112,6 +114,40 @@ namespace ADO01
         private void btonDelete_Click(object sender, EventArgs e)
         {
             // delete
+
+            DialogResult dialogResult = MessageBox.Show("Veriyi gerçekten silmek istiyor musunuz?", "İşlem Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (SqlConnection con=new SqlConnection(constring))
+                {
+                    vs_SQLText = "DELETE FROM Customers WHERE CustomerID='" + dgrdCustomers.CurrentRow.Cells[0].Value.ToString() + "'"; // seçili satırdaki 0. kolonda bulunan değeri alarak silme işlemini yapar...
+
+                    using (SqlCommand cmd = new SqlCommand(vs_SQLText, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        try
+                        {
+                            con.Open();
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("bilgileriniz silindi....");
+
+                            BindGrid(); // refresh
+                        }
+                        catch (Exception message)
+                        {
+                            MessageBox.Show("Hata : "+message.ToString());
+                        }
+
+                    }
+
+                }
+
+
+            }
         }
 
         private void ShowData(string prmMode)

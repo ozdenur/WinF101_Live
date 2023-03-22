@@ -49,6 +49,9 @@ namespace ADO01
                     // SQL Text oluşturuldu...Parametreli...
                     break;
 
+                case "I":
+                    vs_SQLText = "INSERT INTO Customers (CustomerID,CompanyName,ContactName,Country) VALUES (@CustomerID,@CompanyName,@ContactName,@Country)";
+                        break;
                 default:
                     break;
             }
@@ -70,7 +73,7 @@ namespace ADO01
                         con.Open(); // tanımlanan connection açılıyor..
                         cmd.ExecuteNonQuery(); // çalıştırıyor..sqltextimi sql server tarafına gön
 
-                        MessageBox.Show("Bilgileriniz güncellenmiştir...Geçmiş olsun...");
+                        MessageBox.Show("Bilgileriniz başarıyla kaydedilmiştir...");
                         this.Close();
 
                     }

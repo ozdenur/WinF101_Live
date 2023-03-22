@@ -52,6 +52,7 @@
             // tboxCustomerID
             // 
             this.tboxCustomerID.Location = new System.Drawing.Point(164, 57);
+            this.tboxCustomerID.MaxLength = 5;
             this.tboxCustomerID.Name = "tboxCustomerID";
             this.tboxCustomerID.Size = new System.Drawing.Size(105, 26);
             this.tboxCustomerID.TabIndex = 1;
@@ -129,6 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(456, 421);
             this.Controls.Add(this.btonClose);
             this.Controls.Add(this.btonSave);
@@ -143,6 +145,7 @@
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ADO01_Detail";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADO01_Detail";
             this.ResumeLayout(false);
