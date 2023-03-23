@@ -68,10 +68,22 @@ namespace ADO01
 
                     cmd.CommandType = CommandType.Text;
 
+
+                    // **************************
+                    // Parametreli kullanımdan ve güvenlik nedenlerinden dolayı hazırlanan SQL cümlesinin içeriği debug modda tam olarak izlenemiyor. Bu durumda adım adım izlemek gerektiğinde aşağıdaki kod bloğunu kullanabilirsiniz..
+                    //
+                    // string tmp = cmd.CommandText.ToString();
+                    // foreach (SqlParameter param in cmd.Parameters)
+                    // {
+                    //    tmp = tmp.Replace(param.ParameterName.ToString(), "'" + param.Value.ToString() + "'");
+                    // }
+
+
+
                     try
                     {
                         con.Open(); // tanımlanan connection açılıyor..
-                        cmd.ExecuteNonQuery(); // çalıştırıyor..sqltextimi sql server tarafına gön
+                        cmd.ExecuteNonQuery(); // çalıştırıyor..sqltextimi sql server tarafına gönderiyor
 
                         MessageBox.Show("Bilgileriniz başarıyla kaydedilmiştir...");
                         this.Close();
@@ -89,6 +101,11 @@ namespace ADO01
 
 
             }
+
+        }
+
+        private void ADO01_Detail_Load(object sender, EventArgs e)
+        {
 
         }
     }
