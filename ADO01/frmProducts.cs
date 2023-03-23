@@ -12,6 +12,14 @@ namespace ADO01
 {
     public partial class frmProducts : Form
     {
+        // Global Kısım
+        // Aşağıdaki değişgen VT bağlanabilmek için gerekli olan bağlantı cümleciğidir. Şu makinaya..şu database e bağlanmak istiyorum gibi
+        string constring = @"Data Source=DESKTOP-AD6B5QM\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
+        
+        string vs_SQLCommand = ""; // SQL komutlarımı içerecek
+        string vs_SQLQuery = ""; // Query text i içerecek
+        string Mode="";
+
         public frmProducts()
         {
             InitializeComponent();
